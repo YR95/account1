@@ -3,10 +3,19 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="accountDao" class="com.accont.dao.csv.CsvAccountDao">
-		<property name="csvResource" value="account.csv"/>
+	<bean id="student" class="com.accont.Student">
+		<constructor-arg name="classes" ref="class"/>
+		<constructor-arg name="friends">
+			<list>
+				<value>Nana</value>
+				<value>Boba</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg name="personality" ref=""/>
+
 	</bean>
-	<bean id="accountService"  class="com.accont.service.AccountService">
-		<property name="accountDao" ref="accountDao"/>
+	<bean id="class" class="com.accont.Classes">
+		<constructor-arg name="id" value="1"/>
+		<constructor-arg name="name" value="Math"/>
 	</bean>
 </beans>

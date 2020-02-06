@@ -6,7 +6,21 @@
 
 	<groupId>spring</groupId>
 	<artifactId>account</artifactId>
+	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 <dependencies>
 	<dependency>
@@ -25,5 +39,12 @@
 		<artifactId>spring-beans</artifactId>
 		<version>5.0.7.RELEASE</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+	<dependency>
+		<groupId>com.h2database</groupId>
+		<artifactId>h2</artifactId>
+		<version>1.4.200</version>
+	</dependency>
+
 </dependencies>
 </project>
