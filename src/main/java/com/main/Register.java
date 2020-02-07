@@ -12,7 +12,8 @@ public class Register {
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 		EmployeeDao employee = context.getBean("employeeDaoImpl", EmployeeDao.class);
 		employee.createEmployee();
-		employee.insertEmployee(new Employee(1,"Dima"));
+		employee.insertEmployee(new Employee(1,"Dima",10));
 		System.out.println(employee.getEmployeeById(1).getName());
+		employee.deleteEmployeeById(1);
 	}
 }
